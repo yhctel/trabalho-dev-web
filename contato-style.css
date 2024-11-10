@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+
+body {
+    font-family: "Mona Sans", serif;
+    background-color: #ebbe43
+}
+
+header nav {
+    position: fixed;
+    width: 95%;
+    top: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 30px;
+    background: #afb6b479;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+}
+
+header .logo h2 {
+    font-family:  "Lily Script One", cursive;
+    color: #ffd500;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    font-weight: 400;
+    margin-left: 50px;
+}
+
+header .nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+header .nav-links li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+
+.contact-section {
+    padding: 100px 30px;
+    background-color: #12231d;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-content h2 {
+    font-family: "Cedarville Cursive", cursive;
+    font-size: 50pt;
+    margin-bottom: 20px;
+    color: #ffbb00;
+}
+
+.contact-content p {
+    font-family: "Playfair Display", serif;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1em;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid white;
+    background-color: #0d1613;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ffbb00;
+}
+
+.contact-form button {
+    padding: 10px 30px;
+    font-family: "Playfair Display", serif;
+    background-color: #0d1613;
+    border: 1.5px solid white;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #486552;
+}
