@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mona Sans", serif;
+    background-color: #ebbe43
+}
+
+header nav {
+    position: fixed;
+    width: 95%;
+    top: 2%;
+    left: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #afb6b479;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+}
+
+header .logo h2 {
+    font-family:  "Lily Script One", cursive;
+    color: #ffd500;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    font-weight: 400;
+    margin-left: 50px;
+}
+
+header .nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+header .nav-links li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.hero-section {
+    position: relative;
+    background-image: url('heade.png');
+    background-size : cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 100px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #0000001d,#0000003d, #0000003d, #ebbe43); 
+    z-index: 1; 
+}
+
+.hero-content {
+    z-index: 2; 
+}
+
+.hero-section h1 {
+    font-family:  "Lily Script One", cursive;
+    font-size: 70pt;
+    margin: 10px;
+    padding-top: 20px;
+    color: #ffffff;
+}
+
+.hero-section p {
+    font-family: "Mona Sans", serif;
+    font-weight: 300;
+    font-size: 14pt;
+    background-color: #99938589;
+    color: #000000;
+    border: 1.5px solid #000000;
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+}
+
+
+.recipe-container {
+    background-color: #ffe992;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    gap: 30px;
+    margin-bottom: 100px;
+    
+}
+
+#receitas h2 {
+    font-family: "Lily Script One", cursive;
+    font-size: 50pt;
+    padding-top: 50px;
+    text-align: center;
+    color: #000000;
+}
+
+.recipe-card {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    width: 250px;
+    margin: 0 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(24, 24, 24, 0.1);
+    transition: all 0.3s ease;
+}
+
+.recipe-card img {
+    border:1.5px solid #000000;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+
+}
+
+.recipe-card h3 {
+    font-family: "Lily Script One", cursive;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.recipe-card button {
+    padding: 10px 50px;
+    font-family: "Mona Sans", serif;
+    background-color: #000000;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.recipe-card button:hover {
+    background:#171715
+}
+
+.recipe-card:hover {
+    background-color: #fff8df;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#beneficios {
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    background-color: #ffe992;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+}
+
+.benefits-text {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 50px;
+    padding-top: 45px;
+}
+
+.benefits-text h2 {
+    font-family: "Lily Script One", cursive;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.benefits-text p {
+    font-size: 12pt;
+    line-height: 1.4;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.benefits-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    size-adjust: 50%;
+    padding-right: 50px;
+}
+
+.benefits-image img {
+    max-width: 500px;
+    width: 70%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+.scroll-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
