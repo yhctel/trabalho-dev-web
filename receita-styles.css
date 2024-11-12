@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
     margin: 0;
@@ -7,11 +7,13 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: "Mona Sans", serif;
-    background-color: #ebbe43;
+    background-color: #F9F6ED;
 }
 
+/* Cabeçalho */
 header nav {
     position: fixed;
     width: 95%;
@@ -29,8 +31,8 @@ header nav {
 }
 
 header .logo h2 {
-    font-family: "Lily Script One", cursive;
-    color: #ffd500;
+    font-family: "Great Vibes", cursive;
+    color: #FC7458;
 }
 
 header .nav-links {
@@ -54,8 +56,9 @@ header .nav-links li a:hover {
     text-decoration: underline;
 }
 
+/* Breadcrumb */
 .breadcrumb {
-    background-color: #fff8dc;
+    background-color: #ffddca;
     padding: 10px 0 10px 20px;
     border-radius: 50px;
     border: 1.5px solid #000000;
@@ -68,7 +71,6 @@ header .nav-links li a:hover {
     margin-left: 10px;
     color: inherit;
     font-weight: normal;
-    margin-right: 5px;
     text-decoration: underline;
 }
 
@@ -76,6 +78,7 @@ header .nav-links li a:hover {
     color: inherit;
 }
 
+/* Cabeçalho da receita */
 .recipe-header {
     margin-bottom: 50px;
     display: flex;
@@ -96,7 +99,7 @@ header .nav-links li a:hover {
     position: absolute;
     bottom: 10px;
     left: 20px;
-    font-family: "Lily Script One", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 50pt;
     color: #ffffff;
     font-weight: bold;
@@ -110,13 +113,6 @@ header .nav-links li a:hover {
     object-fit: cover;
     border-radius: 30px;
     border: 1.5px solid #000000;
-}
-
-.recipe-title {
-    position: absolute;
-    bottom: 10px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .recipe-info {
@@ -141,6 +137,7 @@ p {
     margin: 0;
 }
 
+/* Seção do caderno de receitas */
 .notebook {
     display: flex;
     gap: 50px;
@@ -155,7 +152,7 @@ p {
     min-height: 200px;
     width: 700px;
     padding: 20px 20px 20px 50px;
-    background-color: #ffe992;
+    background-color: #FFBB96;
     border-radius: 30px;
     text-align: left;
     overflow-y: auto;
@@ -164,7 +161,7 @@ p {
 
 .page h3 {
     padding-top: 30px;
-    font-family: 'Lily Script One', cursive;
+    font-family: 'Great Vibes', cursive;
     margin-bottom: 20px;
     font-size: 26pt;
 }
@@ -201,14 +198,117 @@ p {
     font-weight: bold;
 }
 
+/* Carrossel */
+.carousel-section {
+    margin: 40px;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.carousel-section h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 26pt;
+    margin-bottom: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    height: 500px;
+    width: 50px;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+    overflow: hidden;
+    background-color: #FFBB96;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.carousel-item img {
+    transition: transform 0.3s ease;
+}
+
+.carousel-item.active img {
+    transform: scale(1.1);
+}
+
+.carousel-item.active .carousel-image {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-image, .carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.carousel-video {
+    object-fit: fill;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-control img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control:hover {
+    transform: scale(1.1);
+    background-color: #ffffff;
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+/* Rodapé */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #0d0d0d;
+    background-color: #272727;
     color: white;
-    margin-top: 40px;
 }
 
+footer p {
+    font-size: 12pt;
+}
+
+/* Animações de rolagem */
 .scroll-item {
     opacity: 0;
     transform: translateY(30px);

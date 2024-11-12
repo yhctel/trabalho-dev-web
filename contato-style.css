@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Mona Sans", serif;
-    background-color: #ebbe43
+    background-color: #F9F6ED;
 }
 
 header nav {
-    position: fixed;
+    position: absolute;
     width: 95%;
     top: 2%;
+    left: 2.5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1px 30px;
-    background: #afb6b479;
+    padding: 15px 30px;
+    background: #afcfe852;
     backdrop-filter: blur(10px);
     z-index: 10;
     border-radius: 30px;
@@ -22,8 +29,8 @@ header nav {
 }
 
 header .logo h2 {
-    font-family:  "Lily Script One", cursive;
-    color: #ffd500;
+    font-family: "Great Vibes", cursive;
+    color: #8dbde2;
 }
 
 header .nav-links {
@@ -48,29 +55,31 @@ header .nav-links li a:hover {
 }
 
 
-
 .contact-section {
-    padding: 100px 30px;
-    background-color: #12231d;
+    padding: 150px 30px;
     text-align: center;
-    color: #ffffff;
+    color: #000000;
 }
 
 .contact-content h2 {
-    font-family: "Cedarville Cursive", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 50pt;
-    margin-bottom: 20px;
-    color: #ffbb00;
+    color: #000000;
 }
 
 .contact-content p {
-    font-family: "Playfair Display", serif;
-    font-size: 1.2em;
+    font-family: "Mona Sans", serif;
+    font-size: 12pt;
     margin-bottom: 40px;
 }
 
 .contact-form {
-    max-width: 500px;
+    max-width: 400px;
+    padding: 30px;
+    background-color: #AFCFE8;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.123);
     margin: 0 auto;
 }
 
@@ -80,34 +89,51 @@ header .nav-links li a:hover {
 }
 
 .form-group label {
-    font-size: 1em;
-    color: #ffffff;
+    font-family: "Great Vibes", cursive;
+    font-size: 16pt;
+    color: #000000;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1.5px solid white;
-    background-color: #0d1613;
-    color: #ffffff;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: #ffffff;
+    color: #000000;
     font-size: 1em;
-    font-family: "Playfair Display", serif;
+    font-family: "Mona Sans", serif;
+}
+
+.form-group input {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    border-radius: 20px;
+    height: 120px;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #ffbb00;
+    background-color: #e0f1ff;
+    border-color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form button {
-    padding: 10px 30px;
-    font-family: "Playfair Display", serif;
-    background-color: #0d1613;
-    border: 1.5px solid white;
+    padding: 10px 50px;
+    font-family: "Mona Sans", serif;
+    background-color: #000000;
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 30px;
     color: #ffffff;
     font-size: 1em;
     cursor: pointer;
@@ -115,5 +141,16 @@ header .nav-links li a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #486552;
+    background: #171715
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #272727;
+    color: white;
+}
+
+footer p {
+    font-size: 12pt;
 }

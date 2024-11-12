@@ -15,35 +15,33 @@
                 <h2>AliMente</h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#">Receitas</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="breadcrumb">
-        <a href="index.html">Receitas</a>
-        ᐳ   Panqueca Recheada
+    <div class="breadcrumb scroll-item">
+        <a href="index.html">Receitas</a> / Panqueca Recheada
     </div>
 
     <section class="recipe-header">
         <div class="recipe-image">
-            <!-- Imagem da receita -->
-            <img src="images/WhatsApp Image 2024-11-10 at 14.49.38.jpeg" alt="Nome da Receita">
-            <h2>Panqueca Recheada</h2>
+            <img src="images/WhatsApp Image 2024-11-10 at 14.49.38.jpeg" alt="Nome da Receita" class="scroll-item">
+            <h2 class="scroll-item">Panqueca Recheada</h2>
         </div>
         <div class="recipe-info">
-            <div class="info-item">
+            <div class="info-item scroll-item">
                 <img src="images/relogio.png" alt="icone-tempo" class="icon">
                 <p>60 minutos</p>
             </div>
-            <div class="info-item">
+            <div class="info-item scroll-item">
                 <img src="images/percao.png" alt="icone-tempo" class="icon">
                 <p>3 Porções</p>
             </div>
-            <div class="info-item">
+            <div class="info-item scroll-item">
                 <img src="images/estrela.png" alt="icone-tempo" class="icon">
                 <p>Fácil</p>
             </div>
@@ -51,7 +49,7 @@
     </section>
 
     <section class="notebook">
-        <div class="page left">
+        <div class="page left scroll-item">
             <h3>Ingredientes</h3>
             <ul id="ingredients-list">
                 <li class="scroll-item">1 1/2 xícara de chá de leite</li>
@@ -61,7 +59,7 @@
                 <li class="scroll-item">1 colher de chá de manteiga ou óleo para untar a frigideira</li>
             </ul>
         </div>
-        <div class="page right">
+        <div class="page right scroll-item">
             <h3>Modo de preparo</h3>
             <ol id="preparation-list" class="numbered-list">
                 <li class="scroll-item">Misture os ingredientes da massa até ficar bem homogênea.</li>
@@ -75,6 +73,32 @@
                 <li class="scroll-item">Leve ao forno até o queijo derreter um pouco.</li>
                 <li class="scroll-item">Servir quente.</li>
             </ol>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <h3 class="scroll-item">Mídias</h3>
+        <div class="carousel-container">
+            <button class="carousel-control prev"><img src="images/seta esq.svg" alt="voltar"></button>
+            <div class="carousel scroll-item">
+                <div class="carousel-item">
+                    <img src="images/panqueca1.jpg" alt="Panqueca 1" class="carousel-image">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/panqueca2.jpg" alt="Panqueca 2" class="carousel-image">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/panqueca3.jpg" alt="Panqueca 3" class="carousel-image">
+                </div>
+                <div class="carousel-item">
+                    <iframe class="carousel-video" src="https://www.youtube.com/embed/4nw62y98lN0?si=TT-0emRY9i8myIqd"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <button class="carousel-control next"><img src="images/seta dir.svg" alt="proximo"></button>
         </div>
     </section>
 

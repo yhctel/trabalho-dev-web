@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
     margin: 0;
@@ -9,7 +9,7 @@
 
 body {
     font-family: "Mona Sans", serif;
-    background-color: #ebbe43
+    background-color: #F9F6ED;
 }
 
 header nav {
@@ -29,8 +29,8 @@ header nav {
 }
 
 header .logo h2 {
-    font-family: "Lily Script One", cursive;
-    color: #ffd500;
+    font-family: "Great Vibes", cursive;
+    color: #e7b732;
 }
 
 header .nav-links {
@@ -85,7 +85,7 @@ header .nav-links li a:hover {
 }
 
 .hero-section h1 {
-    font-family: "Lily Script One", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 70pt;
     margin: 10px;
     color: #ebbe43;
@@ -117,7 +117,7 @@ header .nav-links li a:hover {
 }
 
 #receitas h2 {
-    font-family: "Lily Script One", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 50pt;
     padding-top: 50px;
     text-align: center;
@@ -148,7 +148,7 @@ header .nav-links li a:hover {
 }
 
 .recipe-card h3 {
-    font-family: "Lily Script One", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
@@ -202,7 +202,7 @@ header .nav-links li a:hover {
 }
 
 .benefits-text h2 {
-    font-family: "Lily Script One", cursive;
+    font-family: "Great Vibes", cursive;
     font-size: 2.5em;
     margin-bottom: 30px;
 }
