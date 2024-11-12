@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mona Sans", serif;
+    background-color: #ebbe43;
+}
+
+header nav {
+    position: fixed;
+    width: 95%;
+    top: 2%;
+    left: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #afb6b479;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+}
+
+header .logo h2 {
+    font-family: "Lily Script One", cursive;
+    color: #ffd500;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    font-weight: 400;
+    margin-left: 50px;
+}
+
+header .nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 11pt;
+}
+
+header .nav-links li a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.breadcrumb {
+    background-color: #fff8dc;
+    padding: 10px 0 10px 20px;
+    border-radius: 50px;
+    border: 1.5px solid #000000;
+    margin: 120px 40px 0 40px;
+    font-size: 12pt;
+    gap: 10px;
+}
+
+.breadcrumb a {
+    margin-left: 10px;
+    color: inherit;
+    font-weight: normal;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+
+.breadcrumb a:hover {
+    color: inherit;
+}
+
+.recipe-header {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 90px;
+    margin: 50px 0 0 40px;
+    position: relative;
+}
+
+.recipe-image {
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.recipe-image h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-family: "Lily Script One", cursive;
+    font-size: 50pt;
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+    margin: 0;
+}
+
+.recipe-image img {
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
+}
+
+.recipe-title {
+    position: absolute;
+    bottom: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-info {
+    line-height: 2.5;
+    color: #000000;
+    flex: 1;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+p {
+    font-size: 16pt;
+    margin: 0;
+}
+
+.notebook {
+    display: flex;
+    gap: 50px;
+    margin: 50px 20px 0 20px;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.page {
+    flex: 1;
+    min-height: 200px;
+    width: 700px;
+    padding: 20px 20px 20px 50px;
+    background-color: #ffe992;
+    border-radius: 30px;
+    text-align: left;
+    overflow-y: auto;
+    border: 1.5px solid #000000;
+}
+
+.page h3 {
+    padding-top: 30px;
+    font-family: 'Lily Script One', cursive;
+    margin-bottom: 20px;
+    font-size: 26pt;
+}
+
+#ingredients-list, #preparation-list {
+    margin-bottom: 10px;
+    padding: 10px 15px 10px;
+}
+
+#ingredients-list {
+    list-style-type: "- ";
+    padding-left: 10px;
+}
+
+#ingredients-list li, #preparation-list li {
+    margin-bottom: 15px;
+}
+
+.numbered-list {
+    list-style-type: none;
+    counter-reset: step-counter;
+}
+
+.numbered-list li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 30px;
+}
+
+.numbered-list li::before {
+    content: counter(step-counter, decimal-leading-zero) ". ";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d0d0d;
+    color: white;
+    margin-top: 40px;
+}
+
+.scroll-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
