@@ -24,13 +24,14 @@ header nav {
     background: #afb6b479;
     backdrop-filter: blur(10px);
     z-index: 10;
-    border-radius: 30px;
+    border-radius: 50px;
     border: 1.5px solid #000000;
 }
 
-header .logo h2 {
-    font-family: "Great Vibes", cursive;
-    color: #e7b732;
+.logo img {
+    margin-top: 5px;
+    width: 170px; 
+    height: auto;
 }
 
 header .nav-links {
@@ -84,24 +85,25 @@ header .nav-links li a:hover {
     z-index: 2;
 }
 
-.hero-section h1 {
-    font-family: "Great Vibes", cursive;
-    font-size: 70pt;
-    margin: 10px;
-    color: #ebbe43;
+.hero-content img{
+    height: auto;
+    width: 700px;
+    margin-bottom: 20px;
 }
 
 .hero-section p {
     font-family: "Mona Sans", serif;
-    font-weight: 300;
     font-size: 14pt;
     background-color: #00000028;
     color: #000000;
     padding-bottom: 50px;
     border: 1.5px solid #000000;
     border-radius: 30px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 10px 10px 10px;
     backdrop-filter: blur(10px);
+    width: 70%; 
+    max-width: 600px; 
+    margin: 0 auto;
 }
 
 

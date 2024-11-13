@@ -26,13 +26,14 @@ header nav {
     background: #afb6b479;
     backdrop-filter: blur(10px);
     z-index: 10;
-    border-radius: 30px;
+    border-radius: 50px;
     border: 1.5px solid #000000;
 }
 
-header .logo h2 {
-    font-family: "Great Vibes", cursive;
-    color: #FC7458;
+.logo img {
+    margin-top: 5px;
+    width: 170px; 
+    height: auto;
 }
 
 header .nav-links {
@@ -135,6 +136,27 @@ header .nav-links li a:hover {
 p {
     font-size: 16pt;
     margin: 0;
+}
+
+.audio-description {
+    margin: 100px 40px;
+    text-align: center;
+}
+
+.audio-description h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24pt;
+    margin-bottom: 10px;
+    color: #FC7458;
+}
+
+audio {
+    font-family: "Mona Sans", serif;;
+    width: 100%;
+    max-width: 900px;
+    outline: none;
+    border-radius: 30px;
+    border: 1.5px solid #000000;
 }
 
 /* Seção do caderno de receitas */
