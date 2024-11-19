@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas</title>
+    <link rel="stylesheet" href="receitas-geral-styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="search-container scroll-item">
+        <h1>Receitas</h1>
+        <div class="search-wrapper">
+            <input type="text" id="search-bar" placeholder="Procurar receitas..." />
+            <button class="search-btn"><img src="images/search.svg" alt="pesquisa"></button>
+        </div>
+    </div>
+
+
+    <section class="recipe-list scroll-item">
+        <a href="receita1.html" class="recipe-card">
+            <div class="recipe-image"><img src="images/panqueca2.jpg" alt=""></div>
+            <div class="recipe-info">
+                <h2>Panqueca Recheada</h2>
+                <p>A Panqueca Recheada de Carne Moída é um prato irresistível, perfeito para quem busca uma refeição
+                    saborosa e prática. A massa, leve e dourada, envolve um recheio de carne moída suculenta, refogada
+                    com cebola, alho e temperos que realçam o sabor. O molho de tomate traz um toque especial,
+                    complementando perfeitamente a textura macia da panqueca.
+
+                    Ideal para um almoço ou jantar descontraído, essa receita combina simplicidade e sabor. A panqueca
+                    recheada de carne moída pode ser ainda mais deliciosa com a adição de queijo derretido por cima ou
+                    até uma camada de molho bechamel, criando uma refeição completa e cheia de sabor!</p>
+            </div>
+        </a>
+        <a href="salada.html" class="recipe-card">
+            <div class="recipe-image"><img src="images/pipoca.jpg" alt=""></div>
+            <div class="recipe-info">
+                <h2>Salada de Frutas</h2>
+                <p>Refrescante, colorida e cheia de sabor, a Salada de Frutas é a escolha ideal para quem busca uma
+                    sobremesa leve e nutritiva. Combinando uma variedade de frutas frescas, como maçã, banana, uva,
+                    laranja, morango e manga, essa receita traz uma explosão de sabores e texturas, equilibrando doçura
+                    e frescor em cada mordida. Perfeita para qualquer ocasião, desde um lanche saudável até uma
+                    sobremesa leve após as refeições.
+
+                    Você pode adicionar um toque especial com mel, suco de laranja ou até mesmo um pouco de hortelã para
+                    dar um frescor ainda maior. Uma verdadeira explosão de saúde e sabor em uma única tigela!
+
+                </p>
+            </div>
+        </a>
+        <a href="salada.html" class="recipe-card">
+            <div class="recipe-image"><img src="images/pao.jpg" alt=""></div>
+            <div class="recipe-info">
+                <h2>Sanduíche de Ovo</h2>
+                <p>Simples, rápido e delicioso! O Pão com Ovo é uma opção perfeita para um café da manhã prático ou até
+                    mesmo um lanche da tarde. A combinação do pão levemente tostado com o ovo frito cria uma textura
+                    crocante por fora e macia por dentro, enquanto o sabor suave do ovo complementa o gosto do pão. É
+                    uma receita que agrada todos os paladares e pode ser personalizada com temperos ou acompanhamentos
+                    como queijo, presunto ou ervas frescas.
+
+                    Perfeito para quem busca uma refeição rápida, nutritiva e cheia de sabor.</p>
+            </div>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bite&Byte. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // efeito de scroll fofinho
+        document.addEventListener("DOMContentLoaded", () => {
+            // seleciona todos os itens da página que têm a classe "scroll-item"
+            const scrollItems = document.querySelectorAll(".scroll-item");
+
+            // função de verificar a visibilidade dos itens durante o scroll
+            function checkVisibility() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                scrollItems.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+
+                    // Se o item estiver perto da parte inferior da tela, torna-o visível
+                    if (itemTop < triggerBottom) {
+                        item.classList.add("visible");
+                    }
+                });
+            }
+
+            // verifica ao rolar e ao carregar a página
+            window.addEventListener("scroll", checkVisibility);
+            checkVisibility();  // verifica quando a página é carregada
+        });
+
+        // pesquisa nas receitas
+        const searchBar = document.getElementById('search-bar');
+        const searchButton = document.querySelector('.search-btn');
+        const recipeCards = document.querySelectorAll('.recipe-card');
+
+        // Função de pesquisa
+        function filterRecipes() {
+            const query = searchBar.value.toLowerCase();
+
+            recipeCards.forEach(card => {
+                const recipeTitle = card.querySelector('h2').textContent.toLowerCase();
+                const recipeDescription = card.querySelector('p').textContent.toLowerCase();
+
+                // verifica se o nome ou a descrição contém a busca
+                if (recipeTitle.includes(query) || recipeDescription.includes(query)) {
+                    card.classList.add('visible');
+                    card.classList.remove('hidden');
+                    card.style.display = '';
+                } else {
+                    card.classList.remove('visible');
+                    card.classList.add('hidden');
+                    setTimeout(() => card.style.display = 'none', 400);
+                }
+            });
+        }
+
+        // clique no botão de pesquisa
+        searchButton.addEventListener('click', filterRecipes);
+
+        // pesquisa com 'Enter'
+        searchBar.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                filterRecipes();
+            }
+        });
+
+        // pesquisa enquanto digita
+        searchBar.addEventListener('input', filterRecipes);
+
+        recipeCards.forEach(card => {
+            card.classList.add('visible');
+        });
+    </script>
+
+</body>
+
+</html>
