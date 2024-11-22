@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Culinária</title>
+    <link rel="stylesheet" href="sobre-style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Início</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section" id="about">
+        <div class="contact-content">
+            <h2>Sobre Nós</h2>
+            <p>
+                Bem-vindo ao nosso universo de sabores! Aqui na nossa cozinha, celebramos a arte de cozinhar e a alegria de compartilhar momentos inesquecíveis ao redor da mesa. 
+                Criamos receitas que aquecem o coração e inspiram chefs de todas as idades a explorar o mundo da culinária.
+            </p>
+            <div class="image-container">
+                <img src="images/euelet.jpeg" alt="Imagem da equipe" class="about-image">
+            </div>
+        </div>
+
+        <div class="about-details">
+            <div class="about-item scroll-item visible">
+                <h3>🌿 Ingredientes Naturais</h3>
+                <p>
+                    Valorizamos ingredientes frescos e naturais, selecionados com cuidado para oferecer o melhor sabor em cada prato.
+                </p>
+            </div>
+            <div class="about-item scroll-item visible">
+                <h3>👨‍🍳 Nossa Missão</h3>
+                <p>
+                    Ensinar, inspirar e conectar pessoas através da culinária. Queremos tornar cada momento na cozinha especial e divertido.
+                </p>
+            </div>
+            <div class="about-item scroll-item visible">
+                <h3>🍴 Comunidade</h3>
+                <p>
+                    Acreditamos que cozinhar é mais que preparar alimentos, é compartilhar amor e criar memórias. Junte-se à nossa família culinária!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Culinária. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Adicionar animações de rolagem
+        const scrollItems = document.querySelectorAll('.scroll-item');
+
+        const onScroll = () => {
+            const windowHeight = window.innerHeight;
+            scrollItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < windowHeight - 50) {
+                    item.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', onScroll);
+    </script>
+</body>
+</html>
